@@ -1,0 +1,79 @@
+using System;
+ 
+namespace OperationsBetweenNumbers
+{
+    class StartUp
+    {
+        static void Main(string[] args)
+        {
+            double N1 = double.Parse(Console.ReadLine());
+            double N2 = double.Parse(Console.ReadLine());
+            string operation = Console.ReadLine();
+ 
+ 
+ 
+            if (operation == "+")
+            {
+ 
+                if ((N1 + N2) % 2 == 0)
+                {
+                    Console.WriteLine($"{N1} + {N2} = {(N1 + N2)} - even");
+                }
+                else
+                {
+                    Console.WriteLine($"{N1} + {N2} = {(N1 + N2)} - odd");
+                }
+            }
+            if (operation == "-")
+            {
+ 
+                if ((N1 - N2) % 2 == 0)
+                {
+ 
+                    Console.WriteLine($"{N1} - {N2} = {(N1 - N2)} - even");
+                }
+                else if ((N1 - N2) % 2 != 0)
+                {
+                    Console.WriteLine($"{N1} - {N2} = {(N1 - N2)} - odd");
+                }
+            }
+            if (operation == "*")
+            {
+                if ((N1 * N2) % 2 == 0)
+                {
+ 
+                    Console.WriteLine($"{N1} * {N2} = {(N1 * N2)} - even");
+                }
+                else if ((N1 * N2) % 2 != 0)
+                {
+                    Console.WriteLine($"{N1} * {N2} = {(N1 * N2)} - odd");
+                }
+            }
+            if (operation == "/")
+            {
+                if (N2 != 0)
+                {
+                    double result = N1 / N2;
+                    Console.WriteLine($"{N1} / {N2} = {result:f2}");
+                }
+                else if (N2 == 0)
+                {
+                    Console.WriteLine($"Cannot divide {N1} by zero");
+                }
+ 
+ 
+            }
+            if (operation == "%")
+            {
+                if (N2 != 0)
+                {
+                    Console.WriteLine($"{N1} % {N2} = {(N1 % N2)}");
+                }
+                else if (N2 == 0)
+                {
+                    Console.WriteLine($"Cannot divide {N1} by zero");
+                }
+            }
+        }
+    }
+} 
